@@ -1,0 +1,136 @@
+.testimonial {
+  // .testimonial__container
+
+  &__container {
+  }
+
+  // .testimonial__title
+
+  &__title {
+  }
+
+  // .testimonial__sub-title
+
+  &__sub-title {
+  }
+
+  // .testimonial__slider-container
+
+  &__slider-container {
+    margin: 0 -0.625rem;
+  }
+}
+
+.slider-container {
+  // .slider-container__item
+
+  &__item {
+  }
+
+  .slick-dots {
+    // line-height: 1;
+    bottom: -3.875rem;
+    @include adaptiveValue("bottom", -62, -32, 1600, 320, 0);
+
+    li {
+      margin: 0;
+      padding: 0;
+      width: unset;
+      height: unset;
+      &:not(:last-of-type) {
+        margin-right: .625rem;
+      }
+      
+      button {
+        background-color: #D9D9D9;
+        border-radius: 50%;
+        width: .625rem;
+        height: .625rem;
+        &::before {
+          content: "";
+        }
+      }
+
+      &.slick-active {
+        button {
+          background-color: #e40037D9;
+        }
+      }
+    }
+  }
+}
+.review {
+  // .review__body
+
+  &__body {
+    
+  }
+
+  // .review__item
+
+  &__item {
+    height: 100%;
+    border-radius: .9375rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: .9375rem .9375rem 1.5rem .9375rem;
+    margin: 0 .625rem;
+  }
+
+  // .review__hat
+
+  &__hat {
+    display: flex;
+    gap: 1.4375rem;
+    align-items: center;
+  }
+
+  // .review__photo
+
+  &__photo {
+  }
+
+  // .review__person
+
+  &__person {
+  }
+
+  // .review__name
+
+  &__name {
+    font-size: 1.625rem;
+    @include adaptiveValue("font-size", 26, 18, 1600, 320, 0);
+
+    font-weight: 700;
+    letter-spacing: .0813rem;
+    text-transform: capitalize;
+    margin-bottom: .3125rem;
+  }
+
+  // .review__job
+
+  &__job {
+    color: #e40037;
+    font-size: .8125rem;
+    @include adaptiveValue("font-size", 13, 11, 1600, 320, 0);
+
+    font-weight: 600;
+    letter-spacing: .0406rem;
+    text-transform: capitalize;
+  }
+
+  // .review__message
+
+  &__message {
+    font-family: "Open Sans";
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.57;
+    letter-spacing: .0481rem;
+    text-transform: capitalize;
+
+    padding-left: .75rem;
+    margin-top: .8125rem;
+  }
+
+  
+}

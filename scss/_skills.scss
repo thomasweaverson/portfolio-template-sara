@@ -1,0 +1,121 @@
+.skills {
+  // .skills__container
+
+  &__container {
+  }
+
+  // .skills__title
+
+  &__title {
+  }
+
+  // .skills__sub-title
+
+  &__sub-title {
+  }
+
+  // .skills__body
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1.875rem;
+    column-gap: 0rem;
+    justify-content: space-between;
+    @media (max-width: 61.875rem) {
+      justify-content: center;
+      column-gap: .625rem;
+    }
+    @media (max-width: 32.5rem) {
+      row-gap: .625rem;
+    }
+  }
+
+  // .skills__item
+
+  &__item {
+    flex: 0 1 23.9%;
+    padding: .9375rem;
+    max-width: 24.375rem;
+    outline: .0625rem solid red; //!temp
+    @media (max-width: 61.875rem) {
+      flex: 0 1 48%;
+    }
+    @media (max-width: 32.5rem) {
+      flex-basis: 100%;
+    }
+  }
+
+  // .skills__skill
+
+  &__skill {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .skills__name
+
+  &__name {
+    color: #e40037;
+    font-size: 1.25rem;
+    @include adaptiveValue("font-size", 20, 16, 1600, 320, 0);
+
+    font-weight: 700;
+    letter-spacing: .0625rem;
+    text-transform: uppercase;
+  }
+
+  // .skills__percent
+
+  &__percent {
+    font-size: 1.25rem;
+    @include adaptiveValue("font-size", 20, 16, 1600, 320, 0);
+
+    font-weight: 700;
+    letter-spacing: .0625rem;
+    text-transform: uppercase;
+  }
+
+  // .skills__progress
+
+  &__progress {
+    margin-top: .875rem;
+    height: .1875rem;
+    position: relative;
+    @media (max-width: 32.5rem) {
+      margin-top: .3125rem;
+    }
+    .skills__circle {
+      width: 1.25rem;
+      height: 1.25rem;
+      border-radius: 50%;
+      border: .125rem solid #e40037;
+      background-color: #fff;
+
+      position: absolute;
+      z-index: 2;
+      bottom: -0.5rem;
+      left: 81%;
+    }
+
+    progress {
+      /* стилевые правила */
+      height: .1875rem;
+      width: 100%;
+      position: absolute;
+    }
+    progress::-webkit-progress-bar {
+      /* стилевые правила */
+      background-color: #fff;
+    }
+    progress::-webkit-progress-value {
+      /* стилевые правила */
+      background-color: #e40037;
+    }
+    progress::-moz-progress-bar {
+      /* стилевые правила */
+
+      background-color: #e40037;
+    }
+  }
+}

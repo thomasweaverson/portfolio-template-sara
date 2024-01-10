@@ -1,0 +1,265 @@
+.contact {
+  // .contact__container
+
+  &__container {
+  }
+
+  // .contact__title
+
+  &__title {
+  }
+
+  // .contact__sub-title
+
+  &__sub-title {
+  }
+
+  // .contact__outer-body
+
+  &__outer-body {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1.875rem;
+
+    @media (max-width: 55rem) {
+      flex-direction: column;
+      row-gap: 1.875rem;
+    }
+  }
+
+  // .contact__contacts-body
+
+  &__contacts-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+
+    margin-top: 0.3125rem;
+
+    flex: 1 0 auto;
+
+    @media (max-width: 55rem) {
+      flex-direction: column;
+      width: fit-content;
+      margin: 0 auto;
+      margin-top: 1.875rem;
+      @include adaptiveValue("gap", 30, 12, 1600, 320, 0);
+    }
+  }
+
+  // .contact__card
+
+  &__card {
+  }
+
+  // .contact__form
+
+  &__form {
+    flex: 1 0 auto;
+    max-width: 67.0625rem;
+  }
+}
+
+.card-contact {
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+  padding: 0.3125rem 0.9375rem;
+  height: 4.0625rem;
+  // .card-contact__icon
+
+  &__icon {
+  }
+
+  // .card-contact__divider
+
+  &__divider {
+    width: 0.1875rem;
+    height: 3.4375rem;
+    background-color: #fff;
+  }
+
+  // .card-contact__text
+
+  &__text {
+    padding-left: 0.5625rem;
+  }
+
+  // .card-contact__name
+
+  &__name {
+    color: #e40037;
+    font-size: 1.125rem;
+    @include adaptiveValue("font-size", 18, 16, 1600, 320, 0);
+
+    font-weight: 500;
+    letter-spacing: 0.0563rem;
+
+    margin-bottom: 0.125rem;
+  }
+
+  // .card-contact__link
+
+  &__link {
+    font-size: 0.8125rem;
+    @include adaptiveValue("font-size", 13, 12, 1600, 320, 0);
+
+    font-weight: 400;
+    letter-spacing: 0.0406rem;
+    text-transform: capitalize;
+    a {
+      color: #fff;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.form {
+  // .form__body
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1.25rem;
+    justify-content: space-between;
+
+    @media (max-width: 91.25rem) {
+      flex-direction: column;
+    }
+
+    #form-fullname,
+    #form-email {
+      flex: 0 1 49%;
+      width: 100%;
+      padding: 1.25rem;
+      @include adaptiveValue("padding", 20, 12, 1600, 320, 0);
+
+      border-radius: 0.9375rem;
+      border: 0.25rem solid #e40037;
+      @media (max-width: 100rem) {
+        border: 0.1875rem solid #e40037;
+      }
+
+      @media (max-width: 60rem) {
+        border: 0.125rem solid #e40037;
+      }
+
+      @media (max-width: 30rem) {
+        border: 0.0625rem solid #e40037;
+      }
+
+      background: rgba(255, 255, 255, 0);
+
+      color: #f4f4f4;
+      font-family: Poppins;
+      font-size: 1.125rem;
+      @include adaptiveValue("font-size", 18, 16, 1600, 320, 0);
+
+      font-weight: 400;
+      letter-spacing: 0.0563rem;
+
+      &:focus {
+        outline: none;
+        border: 0.25rem solid #ff1d56;
+        @media (max-width: 100rem) {
+          border: 0.25rem solid #ff1d56;
+        }
+
+        @media (max-width: 60rem) {
+          border: 0.1875rem solid #ff1d56;
+        }
+
+        @media (max-width: 30rem) {
+          border: 0.125rem solid #ff1d56;
+        }
+      }
+    }
+
+    #form-textarea {
+      flex: 1 0 100%;
+      width: 100%;
+      padding: 1.25rem;
+      resize: none;
+      @include adaptiveValue("padding", 20, 12, 1600, 320, 0);
+
+      min-height: 11.25rem;
+      @include adaptiveValue("min-height", 180, 130, 1600, 320, 0);
+
+      border-radius: 0.9375rem;
+      border: 0.25rem solid #e40037;
+      @media (max-width: 100rem) {
+        border: 0.1875rem solid #e40037;
+      }
+
+      @media (max-width: 60rem) {
+        border: 0.125rem solid #e40037;
+      }
+
+      @media (max-width: 30rem) {
+        border: 0.0625rem solid #e40037;
+      }
+
+      background: rgba(255, 255, 255, 0);
+
+      color: #f4f4f4;
+      font-family: Poppins;
+      font-size: 1.125rem;
+      @include adaptiveValue("font-size", 18, 16, 1600, 320, 0);
+
+      font-weight: 400;
+      letter-spacing: 0.0563rem;
+
+      &:focus {
+        outline: none;
+        border: 0.25rem solid #ff1d56;
+        @media (max-width: 100rem) {
+          border: 0.25rem solid #ff1d56;
+        }
+
+        @media (max-width: 60rem) {
+          border: 0.1875rem solid #ff1d56;
+        }
+
+        @media (max-width: 30rem) {
+          border: 0.125rem solid #ff1d56;
+        }
+      }
+    }
+  }
+  #form-submit {
+    display: block;
+    max-width: 32.875rem;
+    width: 100%;
+    height: 4.75rem;
+    @include adaptiveValue("height", 76, 56, 1600, 320, 0);
+
+    margin-left: auto;
+    margin-top: 1.25rem;
+
+    border-radius: 0.9375rem;
+    background: #e40037;
+
+    color: #fff;
+    font-family: Poppins;
+    font-size: 1.5rem;
+    @include adaptiveValue("font-size", 24, 18, 1600, 320, 0);
+
+    font-weight: 700;
+    letter-spacing: 0.075rem;
+
+    @media (max-width: 91.25rem) {
+      max-width: unset;
+    }
+
+    &:active {
+      transform: scale(0.99);
+    }
+
+    &:hover {
+      filter: brightness(1.1);
+    }
+
+    cursor: pointer;
+  }
+}

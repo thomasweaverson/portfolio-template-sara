@@ -1,0 +1,102 @@
+.portfolio {
+  // .portfolio__container
+
+  &__container {
+  }
+
+  // .portfolio__title
+
+  &__title {
+  }
+
+  // .portfolio__sub-title
+
+  &__sub-title {
+  }
+
+  // .portfolio__body
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.875rem 1.25rem;
+    @media (max-width: 104.375rem) {
+      justify-content: center;
+    }
+  }
+
+  // .portfolio__item
+
+  &__item {
+    flex: 1 0 25%;
+    @media (max-width: 53.125rem) {
+    }
+  }
+}
+
+.project-card {
+  border-radius: .9375rem;
+  background: rgba(255, 255, 255, 0.1);
+  max-width: 24.375rem;
+  // .project-card__image
+
+  &__image {
+  }
+
+  // .project-card__image-link
+
+  &__image-link {
+    img {
+      width: 100%;
+      border-top-left-radius: .9375rem;
+      border-top-right-radius: .9375rem;
+    }
+  }
+
+  // .project-card__title
+
+  &__text-container {
+    padding: .9375rem;
+    display: flex;
+    flex-direction: column;
+    gap: .625rem;
+  }
+  &__title {
+    font-size: 1.5rem;
+    @include adaptiveValue('font-size', 24, 16, 1600, 850, 0);
+
+    font-weight: 600;
+    letter-spacing: .075rem;
+    text-transform: uppercase;
+  }
+
+  // .project-card__link
+
+  &__link {
+    color: #fff;
+  }
+
+  // .project-card__description
+
+  &__description {
+    font-family: "Open Sans";
+    font-size: .875rem;
+    @include adaptiveValue('font-size', 14, 12, 1600, 850, 0);
+    font-weight: 400;
+    line-height: 1.571428571;
+    letter-spacing: .0481rem;
+    text-transform: capitalize;
+  }
+
+  // .project-card__technologies
+
+  &__technologies {
+    color: #e40037;
+    font-size: .75rem;
+    font-weight: 600;
+    line-height: 1.833333; 
+    letter-spacing: .0413rem;
+    text-transform: uppercase;
+  }
+}

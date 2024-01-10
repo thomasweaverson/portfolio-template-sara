@@ -1,0 +1,132 @@
+/*обнуление*/
+@import "mixins";
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+html,
+body {
+  height: 100%;
+  line-height: 1.5;
+  color: #fff;
+  font-size: 1rem;
+  font-family: Poppins, sans-serif;
+
+  border-radius: .9375rem;
+  background: #212428;
+}
+body._lock {
+  overflow: hidden;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+._container {
+  max-width: 101.25rem;
+  padding: 0rem .9375rem;
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+
+//==============PAGE===================//
+.page {
+  // .page__main-block
+
+  &__main-block {
+    margin-top: 19.875rem;
+    @include adaptiveValue("margin-top", 318, 60, 1600, 320, 0);
+    margin-bottom: 6rem;
+  }
+
+  // .page__skills
+
+  &__skills {
+    margin-top: 17.8125rem;
+    @include adaptiveValue("margin-top", 285, 27, 1600, 320, 0);
+  }
+
+  // .page__portfolio
+
+  &__portfolio {
+    margin-top: 6.25rem;
+    @include adaptiveValue("margin-top", 100, 27, 1600, 320, 0);
+  }
+
+  // .page__testimonial
+
+  &__testimonial {
+    margin-top: 6.25rem;
+    @include adaptiveValue("margin-top", 100, 27, 1600, 320, 0);
+    margin-bottom: 6.875rem;
+    @include adaptiveValue("margin-top", 110, 60, 1600, 320, 0);
+  }
+
+    // .page__contact
+
+    &__contact {
+    }
+}
+
+.heading {
+  font-size: 2rem;
+  @include adaptiveValue("font-size", 32, 22, 1600, 320, 0);
+
+  font-weight: 500;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: .3125rem;
+
+  @media (max-width: 100rem) {
+    text-wrap: balance;
+  }
+}
+.sub-heading {
+  color: #e40037;
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: .0563rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 5.9375rem;
+  @include adaptiveValue("margin-bottom", 95, 10, 1600, 320, 0);
+}
+
+//=====================================//
+@import "./vendor/slick";
+@import "./vendor/slick-theme";
+@import "header";
+@import "main-block";
+@import "skills";
+@import "portfolio";
+@import "testimonials";
+@import "contact";
+@import "footer";
