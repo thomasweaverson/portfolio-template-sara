@@ -248,6 +248,8 @@
     font-weight: 700;
     letter-spacing: 0.075rem;
 
+    transition: filter 0.2s ease 0.1s;
+
     @media (max-width: 91.25rem) {
       max-width: unset;
     }
@@ -258,6 +260,7 @@
 
     &:hover {
       filter: brightness(1.1);
+      transition: filter 0.2s ease 0.1s;
     }
 
     cursor: pointer;

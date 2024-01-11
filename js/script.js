@@ -78,7 +78,16 @@ if (menuLinks.length > 0) {
   }
 }
 
-//Slider init
+//Parallax // main-block__photo
+
+let parallaxedPhoto = document.querySelector('.main-block__photo')
+window.addEventListener('mousemove', function (e) {
+  let x = e.clientX / window.innerWidth
+  let y = e.clientY / window.innerHeight  
+  parallaxedPhoto.style.transform = 'translate(-' + x * 10 + 'px, -' + y * 10 + 'px)'
+})
+
+//Vendor. slickSlider init
 $(document).ready(function () {
   $('.review__body').slick({
     dots: true,
