@@ -87,6 +87,25 @@ window.addEventListener('mousemove', function (e) {
   parallaxedPhoto.style.transform = 'translate(-' + x * 10 + 'px, -' + y * 10 + 'px)'
 })
 
+//IMG-svg to inline-SVG для работы с цветом
+$("img.img-svg").each(function () {
+  var $img = $(this);
+  var imgClass = $img.attr("class");
+  var imgURL = $img.attr("src");
+  $.get(imgURL, function (data) {
+      var $svg = $(data).find("svg");
+      if (typeof imgClass !== "undefined") {
+          $svg = $svg.attr("class", imgClass + " replaced-svg");
+      }
+      $svg = $svg.removeAttr("xmlns:a");
+      if (!$svg.attr("viewBox") && $svg.attr("height") && $svg.attr("width")) {
+          $svg.attr("viewBox", "0 0 " + $svg.attr("height") + " " + $svg.attr("width"))
+      }
+      $img.replaceWith($svg);
+  }, "xml");
+});
+
+
 //Vendor. slickSlider init
 $(document).ready(function () {
   $('.review__body').slick({
